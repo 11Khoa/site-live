@@ -1,0 +1,15 @@
+name: Dậy đi đừng ngủ nữa
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # Chạy mỗi 5 phút
+  workflow_dispatch:  # Cho phép chạy thủ công nếu cần
+
+jobs:
+  keep-awake:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check site live
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://sg-extension.onrender.com/
