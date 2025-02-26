@@ -2,7 +2,7 @@ name: Dậy đi đừng ngủ nữa
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # Chạy mỗi 5 phút
+    - cron: "*/59 * * * *"  # Chạy mỗi 59 phút
   workflow_dispatch:  # Cho phép chạy thủ công nếu cần
 
 jobs:
